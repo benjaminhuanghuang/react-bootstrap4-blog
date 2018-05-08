@@ -1,5 +1,7 @@
 import React from 'react';
 
+import NavItem from './NavItem';
+
 class Navigation extends React.Component {
     render() {
         return (
@@ -12,12 +14,11 @@ class Navigation extends React.Component {
 
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav mr-auto">
-                        <li className="nav-item active">
-                            <a className="nav-link" href="/">Home <span className="sr-only">(current)</span></a>
-                        </li>
-                        <li className="nav-item">
-                            <a className="nav-link" href="/">Link</a>
-                        </li>
+
+                        <NavItem path="/" name="Home" />
+                        <NavItem path="/page2" name="Page2" />
+                        <NavItem path="/page3" name="Disabled" disabled="true" />
+
                         <li className="nav-item dropdown">
                             <a className="nav-link dropdown-toggle" href="/" id="navbarDropdown" role="button" data-toggle="dropdown"
                                 aria-haspopup="true" aria-expanded="false">
@@ -29,9 +30,6 @@ class Navigation extends React.Component {
                                 <div className="dropdown-divider"></div>
                                 <a className="dropdown-item" href="/">Something else here</a>
                             </div>
-                        </li>
-                        <li className="nav-item">
-                            <a className="nav-link disabled" href="/">Disabled</a>
                         </li>
                     </ul>
                     <form className="form-inline my-2 my-lg-0">

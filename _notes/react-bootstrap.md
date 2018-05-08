@@ -31,12 +31,19 @@
     Copy the content of navbar as found on the Bootstrap documentation page
     class attributes should be renamed to className (use find & replace)
     links should not point to ‘#’ so replace that with /
-    
+
 2.3 Abstracting the NavItem
+    abstract the entries in the navbar into a component
 
 2.4 Active NavItem
+```
+    const liClassName = (props.path === pageURI) ? "nav-item active" : "nav-item";
+```
 
 2.5 Disabled NavItem
+```
+      const aClassName = props.disabled ? "nav-link disabled" : "nav-link"
+```
 
 2.6 Using the NavItem
 
