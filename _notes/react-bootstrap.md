@@ -13,18 +13,33 @@
 ```
 1.4 Adding a Bootstrap container into App.js
 ```
-    
+    class App extends Component {
+        render() {
+            return (
+                <div className ="container">
+                    <h1>My Blog </h1>
+                </div>
+            );
+        }
+    }  
 ```
-
-1.5 Starting the development server
-1.6 Cleaning up
 
 ##. Implementing the Bootstrap navigation
 2.1 Navigation React Component
+
 2.2 Bootstrap navbar
+    Copy the content of navbar as found on the Bootstrap documentation page
+    class attributes should be renamed to className (use find & replace)
+    links should not point to ‘#’ so replace that with /
+    
 2.3 Abstracting the NavItem
+
 2.4 Active NavItem
+
 2.5 Disabled NavItem
+
 2.6 Using the NavItem
+
 2.7 Adding a NavDropdown
+
 2.8 Adding state to NavDropdown
